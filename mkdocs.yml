@@ -1,0 +1,6 @@
+site_name: DocNotes
+nav: 
+    - Home: index.md
+    - Java: JAVA.md
+theme: material
+
