@@ -4,7 +4,7 @@
 
 ## Datatypes
 
-![printf1.png](/home/ankesh/projects/docnotes/docs/printf1.png)
+![printf1.png](docs/printf1.png)
 
 
 
