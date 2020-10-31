@@ -1,6 +1,14 @@
-# JAVA
+# **JAVA**
 
-## Declaration
+
+
+## Datatypes
+
+![printf1.png](/home/ankesh/projects/docnotes/docs/printf1.png)
+
+
+
+## **Declaration**
 
 ```java
 public class Solution {
@@ -17,7 +25,9 @@ public class Solution {
 Hello, World.
 ```
 
-## INPUT / OUTPUT
+
+
+## **INPUT / OUTPUT**
 
 print , println.
 
@@ -38,3 +48,15 @@ System.out.println("myInt is: " + myInt);
   myString is: Hi
   myInt is: 5
 ```
+
+
+
+### Printf [formatting]
+
+![yo](/home/ankesh/projects/docnotes/docs/printf2.png)
+
+![printf3.png](/home/ankesh/projects/docnotes/docs/printf3.png)
+
+
+
+
