@@ -53,9 +53,9 @@ System.out.println("myInt is: " + myInt);
 
 ### Printf [formatting]
 
-![yo](/home/ankesh/projects/docnotes/docs/printf2.png)
+![yo](printf2.png)
 
-![printf3.png](/home/ankesh/projects/docnotes/docs/printf3.png)
+![printf3.png](printf3.png)
 
 
 
