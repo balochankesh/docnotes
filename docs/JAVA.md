@@ -1,5 +1,7 @@
 # **JAVA**
 
+---
+
 ## Datatypes
 
 <img src="printf1.png" title="" alt="printf1.png" data-align="center">
@@ -20,6 +22,8 @@ public class Solution {
 
 Hello, World.
 ```
+
+---
 
 ## **INPUT / OUTPUT**
 
@@ -45,9 +49,11 @@ System.out.println("myInt is: " + myInt);
 
 ### Printf [formatting]
 
-<img src="printf2.png" title="" alt="yo" data-align="center">
+<img title="" src="printf2.png" alt="yo" data-align="inline">
 
 <img src="printf3.png" title="" alt="printf3.png" data-align="center">
+
+---
 
 ## **Strings**
 
@@ -94,6 +100,15 @@ System.out.println("myInt is: " + myInt);
 | [trim()](https://www.w3schools.com/java/ref_string_trim.asp)                               | Removes whitespace from both ends of a string                                                                                           | String       |
 | valueOf()                                                                                  | Returns the primitive value of a String object                                                                                          | String       |
 
+```java
+//split delimiter example
+
+
+
+```
+
+---
+
 ## **ARRAYS**
 
 ### declare
@@ -138,7 +153,7 @@ for (int e: arr) {
 
 - `Arrays.binarySearch(Arr, ele));`
 
-# **Data Structures**
+---
 
 ## **Hash Maps**
 
@@ -182,3 +197,5 @@ System.out.println(capitalCities);
 - keySet()
 
 - values()
+
+- containsKey()
