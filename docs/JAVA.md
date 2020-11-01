@@ -4,7 +4,7 @@
 
 ## Datatypes
 
-<img src="printf1.png" title="" alt="printf1.png" data-align="center">
+![fig1](printf1.png)
 
 ## **Declaration**
 
@@ -49,9 +49,9 @@ System.out.println("myInt is: " + myInt);
 
 ### Printf [formatting]
 
-<img title="" src="printf2.png" alt="yo" data-align="inline">
+![fig2](printf2.png)
 
-<img src="printf3.png" title="" alt="printf3.png" data-align="center">
+![fig3](printf3.png)
 
 ---
 
@@ -104,7 +104,9 @@ System.out.println("myInt is: " + myInt);
 //split delimiter example
 
 
-
+String str = "This is an example string, right?  Yes!";
+String delims = "[ .,?!]+";
+String[] tokens = str.split(delims);
 ```
 
 ---
