@@ -53,6 +53,8 @@ System.out.println("myInt is: " + myInt);
 
 ![fig3](printf3.png)
 
+![img4](https://i.imgur.com/UaAGxEE.png)
+
 ---
 
 ## **Strings**
@@ -108,6 +110,16 @@ String str = "This is an example string, right?  Yes!";
 String delims = "[ .,?!]+";
 String[] tokens = str.split(delims);
 ```
+
+![](https://i.imgur.com/WsEhrTY.png)
+
+
+
+### Conversions
+
+![img5](https://i.imgur.com/yvVjDAi.png)
+
+![fig6](https://i.imgur.com/ajH1pYv.png)
 
 ---
 
@@ -201,3 +213,114 @@ System.out.println(capitalCities);
 - values()
 
 - containsKey()
+
+---
+
+## **Regular Expressions**
+
+- **Pattern Class** − A Pattern object is a compiled 
+  representation of a regular expression. The Pattern class provides no 
+  public constructors. To create a pattern, you must first invoke one of 
+  its public static **compile()** methods, which will then return a Pattern object. These methods accept a regular expression as the first argument.
+
+- **Matcher Class** − A Matcher object is the engine that 
+  interprets the pattern and performs match operations against an input 
+  string. Like the Pattern class, Matcher defines no public constructors. 
+  You obtain a Matcher object by invoking the **matcher()** method on a Pattern object.
+
+- **PatternSyntaxException** − A PatternSyntaxException object is an unchecked exception that indicates a syntax error in a regular expression pattern.
+
+
+
+### Cheatsheet
+
+| Character classes         |                                |
+| ------------------------- | ------------------------------ |
+| .                         | any character except newline   |
+| \w\d\s                    | word, digit, whitespace        |
+| \W\D\S                    | not word, digit, whitespace    |
+| [abc]                     | any of a, b, or c              |
+| [^abc]                    | not a, b, or c                 |
+| [a-g]                     | character between a & g        |
+| Anchors                   |                                |
+| ^abc$                     | start / end of the string      |
+| \b\B                      | word, not-word boundary        |
+| Escaped characters        |                                |
+| \.\*\\                    | escaped special characters     |
+| \t\n\r                    | tab, linefeed, carriage return |
+| Groups & Lookaround       |                                |
+| (abc)                     | capture group                  |
+| \1                        | backreference to group #1      |
+| (?:abc)                   | non-capturing group            |
+| (?=abc)                   | positive lookahead             |
+| (?!abc)                   | negative lookahead             |
+| Quantifiers & Alternation |                                |
+| a*a+a?                    | 0 or more, 1 or more, 0 or 1   |
+| a{5}a{2,}                 | exactly five, two or more      |
+| a{1,3}                    | between one & three            |
+| a+?a{2,}?                 | match as few as possible       |
+| ab\|cd                    | match ab or cd                 |
+
+### Syntax
+
+```java
+//example
+
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexMatches {
+
+   public static void main( String args[] ) {
+      // String to be scanned to find the pattern.
+      String line = "This order was placed for QT3000! OK?";
+      String pattern = "(.*)(\\d+)(.*)";
+
+      // Create a Pattern object
+      Pattern r = Pattern.compile(pattern);
+
+      // Now create matcher object.
+      Matcher m = r.matcher(line);
+      if (m.find( )) {
+         System.out.println("Found value: " + m.group(0) );
+         System.out.println("Found value: " + m.group(1) );
+         System.out.println("Found value: " + m.group(2) );
+      }else {
+         System.out.println("NO MATCH");
+      }
+   }
+}
+```
+
+```
+//OUTPUT
+
+Found value: This order was placed for QT3000! OK?
+Found value: This order was placed for QT300
+Found value: 0
+```
+
+### Methods
+
+| Sr.No. | Method & Description                                                                                                                                          |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | **public int start()** Returns the start index of the previous match.                                                                                         |
+| 2      | **public int start(int group)** Returns the start index of the subsequence captured by the given group during the previous match operation.                   |
+| 3      | **public int end()** Returns the offset after the last character matched.                                                                                     |
+| 4      | **public int end(int group)** Returns the offset after the last character of the subsequence captured by the given group during the previous match operation. |
+
+| Sr.No. | Method & Description                                                                                                                                                                           |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | **public boolean lookingAt()** Attempts to match the input sequence, starting at the beginning of the region, against the pattern.                                                             |
+| 2      | **public boolean find()** Attempts to find the next subsequence of the input sequence that matches the pattern.                                                                                |
+| 3      | **public boolean find(int start)** Resets this matcher and then attempts to find the next subsequence of<br> the input sequence that matches the pattern, starting at the specified <br>index. |
+| 4      | **public boolean matches()** Attempts to match the entire region against the pattern.                                                                                                          |
+
+| Sr.No. | Method & Description                                                                                                                                                                                                                                     |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | **public Matcher appendReplacement(StringBuffer sb, String replacement)** Implements a non-terminal append-and-replace step.                                                                                                                             |
+| 2      | **public StringBuffer appendTail(StringBuffer sb)** Implements a terminal append-and-replace step.                                                                                                                                                       |
+| 3      | **public String replaceAll(String replacement)** Replaces every subsequence of the input sequence that matches the pattern with the given replacement string.                                                                                            |
+| 4      | **public String replaceFirst(String replacement)** Replaces the first subsequence of the input sequence that matches the pattern with the given replacement string.                                                                                      |
+| 5      | **public static String quoteReplacement(String s)** Returns a literal replacement String for the specified String. This <br>method produces a String that will work as a literal replacement **s** in the appendReplacement method of the Matcher class. |
