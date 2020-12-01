@@ -356,3 +356,15 @@ This is the intuition behind our definition of balanced that
  we used above. A perfect tree is balanced, and in a perfect
  tree the height grows logarithmically with the number of
  nodes.
+
+
+
+### Code
+
+<details>
+<summary>programs</summary>
+<br>
+This is how you dropdown.
+</details>
+
+
