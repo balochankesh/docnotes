@@ -2,5 +2,6 @@ site_name: DocNotes
 nav: 
     - Home: index.md
     - Java: JAVA.md
+    - DSA : DSA.md
 theme: material
 
